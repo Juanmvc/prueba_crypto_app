@@ -15,7 +15,7 @@ type ButtonProps = HTMLAttributes<HTMLButtonElement> & ButtonOptions;
 const CustomButton = styled('button')<ButtonProps>(
     () => css({
     backgroundColor: '#000259',
-    fontFamily: 'Open Sans, sans serif',
+    fontFamily: 'Roboto',
     fontWeight: 'bold',
     fontSize: '15px',
     color: '#fff',
@@ -23,6 +23,7 @@ const CustomButton = styled('button')<ButtonProps>(
     width: '100%',
     height: '100%',
     padding: "5px",
+    border: '1px solid #000259',
     '&:hover': {
         cursor: 'pointer',
         backgroundColor: 'blue',
