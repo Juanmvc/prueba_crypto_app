@@ -1,4 +1,4 @@
-import { ButtonSolid, Grid, Box, Text, Icon, CryptoCard } from 'design-system';
+import { ButtonSolid, Grid, Box, Icon,  } from 'design-system';
 import React, { useState } from 'react';
 
 export const NavigationBar = () => {
@@ -7,7 +7,7 @@ export const NavigationBar = () => {
 
     return (
         <>
-            <Grid gridTemplateColumns={["1fr 1fr 1fr 1fr"]} gridRowGap="24px" gridColumnGap="18px">
+            <Grid gridTemplateColumns={["1fr 1fr 1fr 1fr"]} gridRowGap="24px" gridColumnGap="18px" pb="18px" mr="auto" ml="auto" width="fit-content">
                 <Box height="64px" width="64px">
                     <ButtonSolid
                         variant={section === "dashboard"? "default" : "white"}
@@ -21,13 +21,13 @@ export const NavigationBar = () => {
                         variant={section === "card"? "default" : "white"}
                         onClick={() => setSection("card")}
                     >
-                        <Icon name="k-icon-card:"/>
+                        <Icon name="k-icon-card"/>
                     </ButtonSolid>
                 </Box>
                 <Box height="64px" width="64px">
                     <ButtonSolid
                         variant={section === "refresh"? "default" : "white"}
-                        onClick={() => setSection("resfresh")}
+                        onClick={() => setSection("refresh")}
                     >
                         <Icon name="k-icon-refresh"/>
                     </ButtonSolid>

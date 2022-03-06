@@ -2,7 +2,6 @@ import * as React from 'react'
 import { FC, HTMLAttributes } from 'react'
 import styled from '@emotion/styled'
 import {
-  variant,
   typography,
   TypographyProps,
   space,
@@ -10,7 +9,6 @@ import {
   color,
   ColorStyleProps,
   flexbox,
-  FlexboxProps,
 } from 'styled-system'
 import css from '@styled-system/css'
 

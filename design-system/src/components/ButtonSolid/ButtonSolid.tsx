@@ -43,6 +43,7 @@ const CustomButton = styled('button')<ButtonProps>(
             '&:not(:disabled):hover': {
                 cursor: 'pointer',
                 backgroundColor: '#000259',
+                color: "white",
               },
               '&:disabled': {
                 cursor: 'not-allowed',

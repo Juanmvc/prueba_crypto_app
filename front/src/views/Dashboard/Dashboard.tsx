@@ -1,60 +1,60 @@
 import { ButtonSolid, Grid, Box, Text, Icon, CryptoCard } from 'design-system';
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+import { getCryptoData } from "../../Repositories/CryptoRepository"
 
-export const Dashboard = () => {  
+export const Dashboard = () => {
+
+  interface CryptoData {
+    id: string,
+    name: string;
+    sku: string;
+    stock: number;
+    variant: number;
+  }
+
+  const [data, setData] = useState<CryptoData[]>([])
+  const [busy, setBusy] = useState(true)
+
+  useEffect(() => {
+      loadCryptoData()
+    }, []);
+  
+    const loadCryptoData = async ()  => {
+      setBusy(true);
+      try {
+        const data = await getCryptoData();
+        const json = await data.json();
+        setData(json)
+        
+      } catch (e) {
+        console.log("Ha ocurrido un error")
+      }
+      setBusy(false)
+    }
+
+      
+
     return (<>
-        <Box mt="24px" mb="32px">
-            <Box pl="auto" pr="auto" pt="20px" mb="44px">
-                <Text color="white">Hi Anakin</Text>
-            </Box>
-            <Box ml="auto" mr="auto" mb="8px">
-                <Text color="white" fontSize="16px">Your balance</Text>
-            </Box>
-            <Box ml="auto" mr="auto">
-                <Text weight="bold" color="white" fontSize="32px">5.908.873$</Text>
-            </Box> 
-        </Box>
         <Box bg="white" pt="28px" pl="16px" pr="16px" borderTopLeftRadius="30px" borderTopRightRadius="30px">
             <Box pl="16px" pr="16px" mb="65px">
                 <Box display="flex" justifyContent="left">
                     <p>Recent</p>
                 </Box>
                 <Grid gridTemplateColumns={["1fr", "1fr 1fr"]} gridRowGap="24px" gridColumnGap="18px">
-                    <CryptoCard
-                    name="Bitcoin"
-                    abreviation="BTC"
-                    value="$67,908.8"
-                    variant="+2.76"
-                    />
-                    <CryptoCard
-                    name="Bitcoin"
-                    abreviation="BTC"
-                    value="$67,908.8"
-                    variant="+2.76"
-                    />
-                    <CryptoCard
-                    name="Bitcoin"
-                    abreviation="BTC"
-                    value="$67,908.8"
-                    variant="+2.76"
-                    />
-                    <CryptoCard
-                    name="Bitcoin"
-                    abreviation="BTC"
-                    value="$67,908.8"
-                    variant="-2.76"
-                    />
-                    <CryptoCard
-                    name="Bitcoin"
-                    abreviation="BTC"
-                    value="$67,908.8"
-                    variant="-2.76"
-                    />
+                  {!busy && data.map(crypto => {
+                    return <CryptoCard
+                              name={crypto.name}
+                              abreviation={crypto.sku}
+                              value={crypto.stock.toString()}
+                              variant={crypto.variant.toString()}
+                              />
+                  })
+                  }
                 </Grid>
             </Box>
             <Box pb="32px" height="64px">
                 <ButtonSolid
-                    onClick={() => console.log("CLICK")}
+                    onClick={() => loadCryptoData()}
                 >
                     Show all transactions
                 </ButtonSolid>
