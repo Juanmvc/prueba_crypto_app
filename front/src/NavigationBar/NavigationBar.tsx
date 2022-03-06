@@ -7,7 +7,7 @@ export const NavigationBar = () => {
 
     return (
         <>
-            <Grid gridTemplateColumns={["1fr 1fr 1fr 1fr"]} gridRowGap="24px" gridColumnGap="18px" pb="18px" mr="auto" ml="auto" width="fit-content">
+            <Grid gridTemplateColumns={["1fr 1fr 1fr 1fr", "1fr"]} gridRowGap="24px" gridColumnGap="18px" pt="18px" pb="18px" mr="auto" ml="auto" width="fit-content">
                 <Box height="64px" width="64px">
                     <ButtonSolid
                         variant={section === "dashboard"? "default" : "white"}

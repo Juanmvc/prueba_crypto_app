@@ -2,16 +2,25 @@ import './App.css';
 import { Dashboard } from "./views/Dashboard/Dashboard" 
 import { NavigationBar } from "./NavigationBar/NavigationBar"
 import { UserHeader } from "./UserHeader/UserHeader"
-import { Box, Grid } from "design-system"
+import { Box, Grid, Icon } from "design-system"
 
 function App() {
   return (
     <div className="App">
+      <Box color="white" zIndex={1} position="absolute" top="20px" right="20px">
+        <Icon
+          name="k-icon-bell"    
+          />
+    </Box>
       <UserHeader/>
-      <Box bg="white" borderTopLeftRadius="30px" borderTopRightRadius="30px">
-        <Grid gridTemplateColumns={["1fr", "1fr 3fr"]}>
-          <Dashboard/>
-          <NavigationBar/>
+      <Box bg="white" borderTopLeftRadius="30px" borderTopRightRadius="30px" height="78vh" pt={["15px","70px"]}>
+        <Grid gridTemplateColumns={["1fr", "1fr 6fr"]} gridTemplateAreas={['"mainContent" "navigationBar"', '"navigationBar mainContent"']}>
+          <Grid gridArea="mainContent">
+            <Dashboard/>
+          </Grid>
+          <Grid gridArea="navigationBar">
+            <NavigationBar/>
+          </Grid>
         </Grid>
       </Box>
     </div>

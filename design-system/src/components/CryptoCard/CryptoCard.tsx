@@ -1,4 +1,4 @@
-import React, { HTMLAttributes } from "react";
+import React from "react";
 import { Box } from "../Box/Box";
 import { Grid } from "../Grid/Grid";
 import { Text } from "../Text/Text";

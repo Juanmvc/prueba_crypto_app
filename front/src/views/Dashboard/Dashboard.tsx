@@ -52,9 +52,9 @@ export const Dashboard = () => {
                   }
                 </Grid>
             </Box>
-            <Box pb="32px" height="64px">
+            <Box pb="32px" height="64px" maxWidth="300px" mr="auto" ml="auto">
                 <ButtonSolid
-                    onClick={() => loadCryptoData()}
+                    onClick={() => console.log("CLICK")}
                 >
                     Show all transactions
                 </ButtonSolid>

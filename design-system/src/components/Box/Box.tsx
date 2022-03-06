@@ -15,6 +15,8 @@ import {
   layout,
   flexbox,
   FlexboxProps,
+  position,
+  PositionProps,
 } from 'styled-system'
 
 export type BoxProps = BorderProps &
@@ -23,6 +25,7 @@ export type BoxProps = BorderProps &
   WidthProps &
   LayoutProps &
   FlexboxProps &
+  PositionProps &
   Omit<ColorProps, 'color'>
 
 export const Box = styled.div<BoxProps>(
@@ -34,4 +37,5 @@ export const Box = styled.div<BoxProps>(
   height,
   layout,
   flexbox,
+  position
 )

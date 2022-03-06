@@ -21,9 +21,8 @@ interface IconOptions {
 
 const IconContainer = styled.i(
   css({
-    lineHeight: 1,
-    width: "21px",
-    height: "21px",
+    display: 'block',
+    fontSize: "21px",
   }) as any,
   typography,
   color,
