@@ -25,16 +25,16 @@ export const CryptoCard: React.FC<CardOptions> = ({
         <Grid gridTemplateColumns="1fr 1fr 1fr" gridColumnGap="20px">
             <Box bg="grey" borderRadius="50%" height="40px" width="40px" mt="auto" mb="auto">
             </Box>
-            <Box justifyContent="left" mr="30px">
+            <Box display="flex" alignItems="start" flexDirection="column" mr="30px">
                 <Text>{name}</Text>
                 <Text disabled={true}>{abreviation}</Text>
             </Box>
-            <Box display="flex" alignItems="end"flexDirection="column">
+            <Box display="flex" alignItems="end" flexDirection="column">
                 <Text>{value}</Text>
                 {variant.charAt(0) === "+" ?
-                    <Text success={true}>{variant}</Text>
+                    <Text fontSize="16px" success={true}>{variant}</Text>
                     :
-                    <Text danger={true}>{variant}</Text>
+                    <Text fontSize="16px" danger={true}>{variant}</Text>
                 }
             </Box>
         </Grid>

@@ -26,7 +26,7 @@ const CustomButton = styled('button')<ButtonProps>(
     border: '1px solid #000259',
     '&:hover': {
         cursor: 'pointer',
-        backgroundColor: 'blue',
+        opacity: 0.5,
       },
     '&:disabled': {
         cursor: 'not-allowed',
@@ -42,7 +42,7 @@ const CustomButton = styled('button')<ButtonProps>(
             backgroundColor: 'white',
             '&:not(:disabled):hover': {
                 cursor: 'pointer',
-                backgroundColor: 'blue',
+                backgroundColor: '#000259',
               },
               '&:disabled': {
                 cursor: 'not-allowed',
