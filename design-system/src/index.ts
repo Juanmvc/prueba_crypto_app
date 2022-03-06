@@ -1,0 +1,1 @@
+export { ButtonSolid } from "./components/ButtonSolid/ButtonSolid";
