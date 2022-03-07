@@ -24,7 +24,7 @@ function App() {
         <Box bg="white" borderTopLeftRadius="30px" borderTopRightRadius="30px" height="80vh" pt={["15px","70px"]}>
           <Grid gridTemplateColumns={["1fr", "1fr 6fr"]} gridTemplateAreas={['"mainContent" "navigationBar"', '"navigationBar mainContent"']}>
             <Grid gridArea="mainContent">
-              {location === "dashboard" ? <Dashboard/> :  <Box height="500px"><Text>Sección sin implementar</Text></Box>}
+              {location === "dashboard" ? <Dashboard/> :  <Box height="500px"><Text fontSize="32px" fontWeight="bold">Sección sin implementar</Text></Box>}
             </Grid>
             <Grid gridArea="navigationBar">
               <NavigationBar/>
