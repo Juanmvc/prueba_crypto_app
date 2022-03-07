@@ -1,4 +1,4 @@
-import { ButtonSolid, Grid, Box, Text, Icon, CryptoCard } from 'design-system';
+import { Box, Text } from 'design-system';
 import React from 'react';
 
 export const UserHeader = () => {  

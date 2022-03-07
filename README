@@ -1,0 +1,19 @@
+EJECUTAR FRONT
+
+cd front
+npm run start
+
+COMPILAR DESIGN SYSTEM
+
+cd design-system
+npm run build
+
+EJECUTAR DESIGN SYSTEM
+
+cd design-system
+npm run start
+
+TESTS DESIGN SYSTEM
+
+cd design-system
+npm run test

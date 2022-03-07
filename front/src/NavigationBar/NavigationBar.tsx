@@ -1,5 +1,5 @@
 import { ButtonSolid, Grid, Box, Icon,  } from 'design-system';
-import React, { useState, useContext  } from 'react';
+import React, { useContext  } from 'react';
 import { userLocation } from "../AppContext"
 
 export const NavigationBar = () => {
