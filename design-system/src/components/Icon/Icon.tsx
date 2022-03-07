@@ -43,6 +43,7 @@ export const Icon: FC<IconProps> = ({ name }) => {
             href="https://d1azc1qln24ryf.cloudfront.net/174874/FrontendChallenge/style-cf.css?fhefj0"
         />
         <IconContainer
+            role="Icon"
             className={`${name}`}
         />
     </>

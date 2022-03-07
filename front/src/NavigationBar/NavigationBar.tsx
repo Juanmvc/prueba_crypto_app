@@ -1,9 +1,8 @@
 import { ButtonSolid, Grid, Box, Icon,  } from 'design-system';
-import React, { useState } from 'react';
+import React from 'react';
 
-export const NavigationBar = () => {
+export const NavigationBar = (section: string, setSection: (newSection: string) => {}) => {
 
-    const [section, setSection] = useState("dashboard")
 
     return (
         <>

@@ -1,4 +1,4 @@
-import { ButtonSolid, Grid, Box, Text, Icon, CryptoCard } from 'design-system';
+import { ButtonSolid, Grid, Box, CryptoCard } from 'design-system';
 import React, { useEffect, useState } from 'react';
 import { getCryptoData } from "../../Repositories/CryptoRepository"
 
@@ -54,7 +54,7 @@ export const Dashboard = () => {
             </Box>
             <Box pb="32px" height="64px" maxWidth="300px" mr="auto" ml="auto">
                 <ButtonSolid
-                    onClick={() => console.log("CLICK")}
+                    onClick={() => alert("¡Función no implementada!")}
                 >
                     Show all transactions
                 </ButtonSolid>
